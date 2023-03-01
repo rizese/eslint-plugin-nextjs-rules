@@ -2,22 +2,51 @@
 
 Some nifty Next.js ESLint rules
 
-# Rules
+## Installation
 
-### `no-get-server-side-props`
+You'll first need to install [ESLint](https://eslint.org/):
 
-PEnforce static page generation on Next.js applications by disabling usage of [getServerSideProps](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props) among a given set of files.
-
-Example usage
-
+```sh
+npm i eslint --save-dev
 ```
-/** .eslintrc **/
-module.exports = {
-  plugins: ["eslint-plugin-nextjs-rules", ...],
-  rules: {
-    "eslint-plugin-nextjs-rules/no-get-server-side-props": ["error", ["src/pages/index.tsx"]]
-/***                                                                   ^^^^^ array of files to disallow usage of getServerSideProps
-    ...
-  }
+
+Next, install `eslint-plugin-nextjs-rules`:
+
+```sh
+npm install eslint-plugin-nextjs-rules --save-dev
+```
+
+## Usage
+
+Add `nextjs-rules` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+
+```json
+{
+    "plugins": [
+        "nextjs-rules"
+    ]
 }
 ```
+
+
+Then configure the rules you want to use under the rules section.
+
+```json
+{
+    "rules": {
+        "nextjs-rules/rule-name": 2
+    }
+}
+```
+
+## Rules
+
+<!-- begin auto-generated rules list -->
+
+| Name                                                               | Description                                                                                        |
+| :----------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+| [no-get-server-side-props](docs/rules/no-get-server-side-props.md) | Disallow usage of `getServerSideProps` method in a given list of files to enforce static rendering |
+
+<!-- end auto-generated rules list -->
+
+
