@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-nextjs-rules",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Some nifty Next.js ESLint rules",
   "keywords": [
     "eslint",
@@ -9,14 +9,17 @@
   ],
   "author": "Rizese",
   "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizese/eslint-plugin-nextjs-rules"
+  },
   "exports": "./lib/index.js",
   "scripts": {
-    "build:docs": "npm run update:eslint-docs",
+    "build:docs": "eslint-doc-generator",
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
-    "test": "mocha tests --recursive",
-    "update:eslint-docs": "eslint-doc-generator"
+    "test": "mocha tests --recursive"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
