@@ -1,0 +1,13 @@
+{
+  "name": "eslint-plugin-nextjs-rules",
+  "version": "1.0.0",
+  "description": "Some nifty Next.js ESLint rules",
+  "repository": "git@github.com:rizese/eslint-plugin-nextjs-rules.git",
+  "author": "Ricky <ricky+zese@thirtymadison.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-plugin-utils": "^2.0.0"
+  }
+}
