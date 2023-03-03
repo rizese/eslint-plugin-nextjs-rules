@@ -1,6 +1,9 @@
 "use strict";
 
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 6
+  },
   root: true,
   extends: [
     "eslint:recommended",
