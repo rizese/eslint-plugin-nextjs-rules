@@ -1,6 +1,5 @@
 // Import the file that we want to test
 const testsIndex = require("../lib/index");
-const { expect } = require("jest");
 
 describe("testsIndex", () => {
   test('should export an object named "rules"', () => {
