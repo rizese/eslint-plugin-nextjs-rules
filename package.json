@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-nextjs-rules",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Some nifty Next.js ESLint rules",
   "keywords": [
     "eslint",
@@ -20,9 +20,7 @@
     "lint:js": "eslint .",
     "test": "jest"
   },
-  "dependencies": {
-    "requireindex": "^1.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^8.19.0",
     "eslint-doc-generator": "^1.4.3",

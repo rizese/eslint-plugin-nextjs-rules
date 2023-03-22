@@ -31,10 +31,21 @@ Then configure the rules you want to use under the rules table further down in t
 ```javascript
 // .eslintrc
 module.exports = {
-  plugins: ["eslint-plugin-nextjs-rules", ...],
+  plugins: [..., "nextjs-rules", ...],
   rules: {
-    "eslint-plugin-nextjs-rules/no-get-server-side-props": ["error", ["src/pages/index.tsx"]]
-//                                                                   ^ array of files to disallow usage of getServerSideProps
+    ...
+    "nextjs-rules/no-get-server-side-props": [
+      "error",
+      {
+        files: [
+          // pages where you don't want getServerSideProps() used at all
+          `${__dirname}/src/pages/index.tsx`,
+          `${__dirname}/src/pages/something-went-wrong.tsx`,
+          `${__dirname}/src/pages/our-products/[product].tsx`,
+          `${__dirname}/src/pages/faq/index.tsx`
+        ]
+      }
+    ]
     ...
   }
 }
